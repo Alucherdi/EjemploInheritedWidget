@@ -27,8 +27,9 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Container(
 
-      // Se maneja el InheritedWidget como padre de los widgets que compartan la información
+      // Se maneja el InheritedWidget como el envoltorio de los widgets que compartiran información
       child: Center(child: Shower(
+        // opcionalmente, se pueden inicializar las variables que queremos usar, en mi caso, es estrictamente necesario, puesto que se modifican con el state
         counter: counter,
         addCounter: () => setState(() => counter++),
         child: ButtonText()
